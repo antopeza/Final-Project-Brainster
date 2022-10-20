@@ -7,10 +7,10 @@ Original file is located at
     https://colab.research.google.com/drive/16XYkV43FD2GW_kWso-YAydiYODWWkDrW
 """
 
-!pip install streamlit
+#!pip install streamlit
 
-import streamlit as st
-import pandas as pd
+#import streamlit as st
+#import pandas as pd
 
 st.write("""
 # SIMPLE TEXT SIMILARITY APP 
