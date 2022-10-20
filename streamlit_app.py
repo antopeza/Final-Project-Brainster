@@ -94,7 +94,7 @@ def main():
         word_2 = st.text_area('Please write your sentence 2')
         word_2_m = [sent.lower().split(" ") for sent in word_2]
         
-    st.json(word_1_m)
+    st.success(word_1_m)
         
         #click = st.button('click me')
         
