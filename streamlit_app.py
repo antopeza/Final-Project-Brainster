@@ -38,15 +38,15 @@ def main():
         
 #         st.success(heatmap)
 
-     with col2:
-        sentence_2 = st.text_area('Please write your sentence 1')
-        sentence_2 = sentence_2.lower().strip()
-        sentence_2 = re.sub(r'[^a-z0-9\s]', '', sentence_2)  # removing all caracters that are not alpha numeric
+    with col2:
+                   sentence_2 = st.text_area('Please write your sentence 1')
+                   sentence_2 = sentence_2.lower().strip()
+                   sentence_2 = re.sub(r'[^a-z0-9\s]', '', sentence_2)  # removing all caracters that are not alpha numeric
     
-        sentence_2 = sentence_2.translate(str.maketrans('', '', string.punctuation))  # remove punctuation
+                    sentence_2 = sentence_2.translate(str.maketrans('', '', string.punctuation))  # remove punctuation
         #sentence_1 = remove_stopwords(sentence_1)
         
-        st.success(sentence_2)
+                    st.success(sentence_2)
         
     
 
