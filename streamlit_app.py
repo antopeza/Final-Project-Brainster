@@ -98,7 +98,7 @@ def main():
             word_1_m = [sent.lower().split(" ") for sent in word_1]
             word_2_m = [sent.lower().split(" ") for sent in word_2]
         
-            st.success(word_1_m, word_2_m)
+            st.json(word_1_m, word_2_m)
         
         #else: 
          #   st.write('try again')
