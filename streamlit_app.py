@@ -98,10 +98,10 @@ def main():
     
     if st.button('Compare text'):
         clean_1 = clean_sentence(word_1)
-        clean_2 = clean_sentence(word_2
-        summary_result = clean_1 + clean_2
+        #clean_2 = clean_sentence(word_2
+        #summary_result = clean_1 + clean_2
         
-        st.success(summary_result)
+        st.success(clean_1)
                                  
     
 if __name__== '__main__':
