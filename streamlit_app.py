@@ -9,8 +9,8 @@ from string import punctuation
 #import gensim
 #from gensim.parsing.preprocessing import remove_stopwords
 
-
-
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.feature_extraction.text import CountVectorizer
 
 
 ## Function streamlit 
@@ -22,50 +22,33 @@ def main():
 
     col1, col2 = st.columns(2)
     with col1:
-        sentence_1 = st.text_area('Please write your sentence 1')
-        #word_1_m = [sent.lower().split(" ") for sent in word_1]
-        
-        
+        sentence_1 = st.text_area('Please write your sentence 1')     
         sentence_1 = sentence_1.lower().strip()
         sentence_1 = re.sub(r'[^a-z0-9\s]', '', sentence_1)  # removing all caracters that are not alpha numeric
-    #sentence = re.sub(r'\s{2,}', ' ', sentence
-   
         sentence_1 = sentence_1.translate(str.maketrans('', '', string.punctuation))  # remove punctuation
         #sentence_1 = remove_stopwords(sentence_1)
         
-        st.success(sentence_1)
-#     with col2:
-#         word_2 = st.text_area('Please write your sentence 2')
-#         word_2_m = [sent.lower().split(" ") for sent in word_2]
+        vectorizer = CountVectorizer()
+        X = vectorizer.fit_transform(sentence_1)
+        arr = X.toarray()
+        create_heatmap(cosine_similarity(arr))
         
-        #st.success(word_1_m)
         
-        #click = st.button('click me')
+        #st.success(sentence_1)
+#      with col2:
+#         sentence_2 = st.text_area('Please write your sentence 1')
+#         sentence_2 = sentence_2.lower().strip()
+#         sentence_2 = re.sub(r'[^a-z0-9\s]', '', sentence_2)  # removing all caracters that are not alpha numeric
+    
+#         sentence_2 = sentence_2.translate(str.maketrans('', '', string.punctuation))  # remove punctuation
+#         #sentence_1 = remove_stopwords(sentence_1)
         
-        #if st.button('click me'):
-#             word_1_m = [sent.lower().split(" ") for sent in word_1]
-#             word_2_m = [sent.lower().split(" ") for sent in word_2]
-        
-           # st.json(word_1_m, word_2_m)
-        
-        #else: 
-         #   st.write('try again')
+#         st.success(sentence_2)
         
     
-    
-    
-#     sentences = ["The bottle is empty",
-# "There is nothing in the bottle"]
-# sentences = [sent.lower().split(" ") for sent in sentences]
-# jaccard_similarity(sentences[0], sentences[1])
-    
-    
-#     if st.button('Compare text'):
-#         clean_1 = clean_sentence(word_1)
-#         #clean_2 = clean_sentence(word_2
-#         #summary_result = clean_1 + clean_2
-        
-#         st.success(clean_1)
+
+
+
                                  
     
 if __name__== '__main__':
