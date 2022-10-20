@@ -98,7 +98,7 @@ def main():
             word_1_m = [sent.lower().split(" ") for sent in word_1]
             word_2_m = [sent.lower().split(" ") for sent in word_2]
         
-            print word_1_m, word_2_m
+            print(word_1_m, word_2_m)
         
         #else: 
          #   st.write('try again')
