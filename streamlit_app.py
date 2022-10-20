@@ -31,7 +31,7 @@ def main():
     #sentence = re.sub(r'\s{2,}', ' ', sentence
    
         sentence_1 = sentence_1.translate(str.maketrans('', '', string.punctuation))  # remove punctuation
-        sentence_1 = remove_stopwords(sentence_1)
+        #sentence_1 = remove_stopwords(sentence_1)
         
         st.success(sentence_1)
 #     with col2:
