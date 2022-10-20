@@ -89,16 +89,20 @@ def main():
     col1, col2 = st.columns(2)
     with col1:
         word_1 = st.text_area('Please write your sentence 1')
+        word_1_m = [sent.lower().split(" ") for sent in word_1]
     with col2:
         word_2 = st.text_area('Please write your sentence 2')
+        word_2_m = [sent.lower().split(" ") for sent in word_2]
+        
+    st.json(word_1_m)
         
         #click = st.button('click me')
         
-        if st.button('click me'):
-            word_1_m = [sent.lower().split(" ") for sent in word_1]
-            word_2_m = [sent.lower().split(" ") for sent in word_2]
+        #if st.button('click me'):
+#             word_1_m = [sent.lower().split(" ") for sent in word_1]
+#             word_2_m = [sent.lower().split(" ") for sent in word_2]
         
-            st.json(word_1_m, word_2_m)
+           # st.json(word_1_m, word_2_m)
         
         #else: 
          #   st.write('try again')
