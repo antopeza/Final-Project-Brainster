@@ -17,3 +17,5 @@ def main():
     click = st.button('click me')
     
     
+if __name__== '__main__':
+    main()
