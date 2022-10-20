@@ -18,4 +18,4 @@ st.write("""
 Compare two sentences and check it out!
 """)
 
-sentence_one = st.text.input()
+sentence_one = st.text.input('word1', 'palabra')
