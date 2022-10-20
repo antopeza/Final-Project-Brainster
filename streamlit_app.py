@@ -7,13 +7,13 @@ import re
 import string
 from string import punctuation
 
-from sklearn.model_selection import train_test_split, GridSearchCV
+#from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import LinearSVC
-import sklearn.metrics as metrics
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+#import sklearn.metrics as metrics
+#from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 import nltk
 from nltk.stem import WordNetLemmatizer, PorterStemmer, LancasterStemmer
