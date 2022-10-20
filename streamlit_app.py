@@ -9,8 +9,8 @@ Original file is located at
 
 #!pip install streamlit
 
-#import streamlit as st
-#import pandas as pd
+import streamlit as st
+import pandas as pd
 
 st.write("""
 # SIMPLE TEXT SIMILARITY APP 
