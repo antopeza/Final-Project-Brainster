@@ -95,13 +95,13 @@ def main():
         #click = st.button('click me')
         
         if st.button('click me'):
-            word_1 = [sent.lower().split(" ") for sent in word_1]
-            word_2 = [sent.lower().split(" ") for sent in word_2]
+            word_1_m = [sent.lower().split(" ") for sent in word_1]
+            word_2_m = [sent.lower().split(" ") for sent in word_2]
         
-            return jaccard_similarity(word_1, word_2)
+            return word_1_m, word_2_m
         
-        else: 
-            st.write('try again')
+        #else: 
+         #   st.write('try again')
         
     
     
