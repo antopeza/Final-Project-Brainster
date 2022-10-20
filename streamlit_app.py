@@ -25,3 +25,4 @@ with col2:
     word_2 = st.text_area('Please write your sentence 2')
 
     
+click = st.button('click me')
