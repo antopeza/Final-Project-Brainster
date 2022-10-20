@@ -31,10 +31,10 @@ def main():
         vectorizer = CountVectorizer()
         X = vectorizer.fit_transform(sentence_1)
         arr = X.toarray()
-        create_heatmap(cosine_similarity(arr))
+        heatmap = create_heatmap(cosine_similarity(arr))
         
         
-        #st.success(sentence_1)
+        st.success(heatmap)
 #      with col2:
 #         sentence_2 = st.text_area('Please write your sentence 1')
 #         sentence_2 = sentence_2.lower().strip()
