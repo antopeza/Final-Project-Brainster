@@ -92,12 +92,16 @@ def main():
     with col2:
         word_2 = st.text_area('Please write your sentence 2')
         
-        click = st.button('click me')
+        #click = st.button('click me')
         
-        word_1 = [sent.lower().split(" ") for sent in word_1]
-        word_2 = [sent.lower().split(" ") for sent in word_2]
+        if st.button('click me'):
+            word_1 = [sent.lower().split(" ") for sent in word_1]
+            word_2 = [sent.lower().split(" ") for sent in word_2]
         
-        jaccard_similarity(word_1, word_2)
+            return jaccard_similarity(word_1, word_2)
+        
+        else: 
+            st.write('try again')
         
     
     
