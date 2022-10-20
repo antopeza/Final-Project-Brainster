@@ -8,7 +8,7 @@ import string
 from string import punctuation
 #import gensim
 #from gensim.parsing.preprocessing import remove_stopwords
-
+import sklearn
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 
@@ -30,23 +30,23 @@ def main():
         st.success(sentence_1
         #sentence_1 = remove_stopwords(sentence_1)
         
-#         vectorizer = CountVectorizer()
-#         X = vectorizer.fit_transform(sentence_1)
-#         arr = X.toarray()
-#         heatmap = create_heatmap(cosine_similarity(arr))
+        vectorizer = CountVectorizer()
+        X = vectorizer.fit_transform(sentence_1)
+        arr = X.toarray()
+        heatmap = create_heatmap(cosine_similarity(arr))
         
         
-#         st.success(heatmap)
-
+        st.success(heatmap)
+                   
     with col2:
-                   sentence_2 = st.text_area('Please write your sentence 1')
-                   sentence_2 = sentence_2.lower().strip()
-                   sentence_2 = re.sub(r'[^a-z0-9\s]', '', sentence_2)  # removing all caracters that are not alpha numeric
+        sentence_2 = st.text_area('Please write your sentence 1')
+        sentence_2 = sentence_2.lower().strip()
+        sentence_2 = re.sub(r'[^a-z0-9\s]', '', sentence_2)  # removing all caracters that are not alpha numeric
     
-                    sentence_2 = sentence_2.translate(str.maketrans('', '', string.punctuation))  # remove punctuation
+        sentence_2 = sentence_2.translate(str.maketrans('', '', string.punctuation))  # remove punctuation
         #sentence_1 = remove_stopwords(sentence_1)
         
-                    st.success(sentence_2)
+        st.success(sentence_2)
         
     
 
