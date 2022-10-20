@@ -6,8 +6,8 @@ import os
 import re
 import string
 from string import punctuation
-import gensim
-from gensim.parsing.preprocessing import remove_stopwords
+#import gensim
+#from gensim.parsing.preprocessing import remove_stopwords
 
 
 
