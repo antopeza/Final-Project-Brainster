@@ -18,4 +18,10 @@ st.write("""
 Compare two sentences and check it out!
 """)
 
-sentence_one = st.text.input('word1', 'palabra')
+col1, col2, col3 = st.beta_columns(3)
+with col1:
+    word_1 = st.text_input('word 1', 'shirt')
+with col2:
+    word_2 = st.text_input('word 2', 'jeans')
+with col3:
+    word_3 = st.text_input('word 3', 'apple')
