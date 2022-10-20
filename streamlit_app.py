@@ -27,11 +27,11 @@ def main():
         
         
         sentence_1 = sentence_1.lower().strip()
-        #sentence_1 = re.sub(r'[^a-z0-9\s]', '', sentence_1)  # removing all caracters that are not alpha numeric
+        sentence_1 = re.sub(r'[^a-z0-9\s]', '', sentence_1)  # removing all caracters that are not alpha numeric
     #sentence = re.sub(r'\s{2,}', ' ', sentence
    
-        #sentence_1 = sentence_1.translate(str.maketrans('', '', string.punctuation))  # remove punctuation
-        #sentence_1 = remove_stopwords(sentence_1)
+        sentence_1 = sentence_1.translate(str.maketrans('', '', string.punctuation))  # remove punctuation
+        sentence_1 = remove_stopwords(sentence_1)
         
         st.success(sentence_1)
 #     with col2:
